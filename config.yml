@@ -1,0 +1,33 @@
+backend:
+  name: git-gateway
+  branch: main
+
+# Esto hace que las imágenes que subas en los posts se guarden en el repositorio
+media_folder: "content/blog/images"
+public_folder: "/content/blog/images"
+
+publish_mode: simple
+
+collections:
+  - name: "blog"
+    label: "Novedades / Blog"
+    label_singular: "Novedad"
+    folder: "content/blog"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    extension: "md"
+    format: "frontmatter"
+    identifier_field: "title"
+    summary: "{{title}} — {{date}}"
+    sortable_fields: ["date", "title"]
+    view_filters:
+      - label: "Publicadas"
+        field: draft
+        pattern: "false"
+    fields:
+      - { label: "Título", name: "title", widget: "string" }
+      - { label: "Fecha", name: "date", widget: "datetime", format: "YYYY-MM-DD", date_format: "DD/MM/YYYY", time_format: false }
+      - { label: "Resumen breve (aparece en la lista)", name: "excerpt", widget: "text" }
+      - { label: "Imagen de portada (opcional)", name: "cover", widget: "image", required: false }
+      - { label: "Borrador (no se publica todavía)", name: "draft", widget: "boolean", default: false }
+      - { label: "Contenido", name: "body", widget: "markdown" }
