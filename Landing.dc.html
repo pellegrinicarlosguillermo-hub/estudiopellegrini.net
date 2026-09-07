@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<template id="__bundler_thumbnail" data-bg-color="#f3f2f2">
+  <svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+    <rect width="1200" height="800" fill="#f3f2f2"/>
+    <text x="600" y="380" text-anchor="middle" font-family="Georgia, serif" font-size="70" fill="#201e1d">ESTUDIO JURÍDICO</text>
+    <text x="600" y="470" text-anchor="middle" font-family="Georgia, serif" font-size="90" font-weight="bold" fill="#201e1d">PELLEGRINI</text>
+    <rect x="450" y="520" width="300" height="6" fill="#ec3013"/>
+  </svg>
+</template>
+<helmet>
+<link rel="stylesheet" href="_ds/modernist-7e6f9202-cd21-4b37-b783-b9618a64c30e/styles.css">
+<script src="_ds/modernist-7e6f9202-cd21-4b37-b783-b9618a64c30e/_ds_bundle.js"></script>
+<style>
+body { margin: 0; text-wrap: pretty; }
+a { color: var(--color-accent); text-decoration: none; }
+a:hover { color: var(--color-accent-700); text-decoration: underline; }
+</style>
+</helmet>
+
+<nav class="nav">
+  <img src="uploads/MARCA.png" alt="Estudio Jurídico Pellegrini" style="height: 46px; width: auto; margin-right: auto" />
+  <a href="#nosotros">Nosotros</a>
+  <a href="#servicios">Áreas</a>
+  <a href="#preguntas">Preguntas</a>
+  <a href="#contacto">Contacto</a>
+  <a href="{{ heroWa }}" target="_blank" rel="noopener" class="btn btn-primary">WhatsApp</a>
+</nav>
+
+<section style="max-width: 1200px; margin: 0 auto; padding: clamp(56px, 9vw, 112px) clamp(20px, 5vw, 72px) 64px; display: grid; grid-template-columns: minmax(0, 6fr) minmax(0, 5fr); gap: clamp(24px, 5vw, 64px); align-items: center">
+  <div>
+    <h1 style="font-family: var(--font-heading); font-weight: 800; font-size: clamp(36px, 5.2vw, 58px); line-height: 1.08; letter-spacing: -0.02em; margin: 0; max-width: 17ch">Defendemos tus derechos con claridad y cercanía.</h1>
+    <p style="font-size: 18px; line-height: 1.6; max-width: 58ch; margin: 28px 0 0; color: color-mix(in srgb, var(--color-text) 78%, transparent)">Asesoramiento legal directo con el abogado, sin intermediarios. Derecho laboral, civil, comercial y defensa del consumidor, con atención presencial en Palermo, CABA, y a distancia en todo el Gran Buenos Aires.</p>
+    <div style="display: flex; gap: 12px; flex-wrap: wrap; margin-top: 32px">
+      <a href="{{ heroWa }}" target="_blank" rel="noopener" class="btn btn-primary">Consultar por WhatsApp</a>
+      <a href="#servicios" class="btn btn-ghost">Ver servicios</a>
+    </div>
+  </div>
+  <figure class="grayscale" style="margin: 0">
+    <img src="uploads/pasted-1788821470973-0.png" alt="Palacio de Tribunales, Ciudad Autónoma de Buenos Aires" style="width: 100%; aspect-ratio: 4 / 3; object-fit: cover; display: block" />
+  </figure>
+</section>
+
+<hr class="hr" style="margin: 0; max-width: 1200px; margin-left: auto; margin-right: auto; margin-inline: auto" />
+
+<section id="nosotros" style="max-width: 1200px; margin: 0 auto; padding: 64px clamp(20px, 5vw, 72px); display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: clamp(24px, 5vw, 64px); align-items: center">
+  <div>
+    <span style="display: block; font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--color-accent-700); font-weight: 800; margin-bottom: 12px">Sobre el estudio</span>
+    <h2 style="max-width: 22ch">Trato directo con el abogado, sin intermediarios</h2>
+    <p style="font-size: 16px; line-height: 1.6; max-width: 62ch; color: color-mix(in srgb, var(--color-text) 78%, transparent); margin-top: 12px">En el Estudio Jurídico Pellegrini cada consulta la atiende directamente el abogado Carlos Guillermo Pellegrini, sin pasar por intermediarios ni gestores. Ofrecemos atención presencial en Palermo, CABA, y también a distancia, para que puedas resolver tu situación legal donde estés.</p>
+  </div>
+  <figure class="grayscale" style="margin: 0">
+    <img src="uploads/pasted-1788821064057-0.png" alt="Vista aérea del Obelisco, Ciudad Autónoma de Buenos Aires" style="width: 100%; aspect-ratio: 4 / 3; object-fit: cover; display: block" />
+  </figure>
+</section>
+
+<hr class="hr" style="margin: 0; max-width: 1200px; margin-inline: auto" />
+
+<section id="servicios" style="max-width: 1200px; margin: 0 auto; padding: 64px clamp(20px, 5vw, 72px)">
+  <span style="display: block; font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--color-accent-700); font-weight: 800; margin-bottom: 12px">Áreas de práctica</span>
+  <h2 style="max-width: 24ch">En qué podemos ayudarte</h2>
+  <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 16px; margin-top: 32px">
+    <sc-for list="{{ areas }}" as="area" hint-placeholder-count="12">
+      <div class="card elev-sm" style="justify-content: space-between; min-height: 140px">
+        <h3 class="card-title">{{ area.name }}</h3>
+        <a href="{{ area.wa }}" target="_blank" rel="noopener" class="btn btn-secondary btn-block">Consultar por WhatsApp</a>
+      </div>
+    </sc-for>
+  </div>
+</section>
+
+<hr class="hr" style="margin: 0; max-width: 1200px; margin-inline: auto" />
+
+<section id="porque" style="max-width: 1200px; margin: 0 auto; padding: 64px clamp(20px, 5vw, 72px)">
+  <span style="display: block; font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--color-accent-700); font-weight: 800; margin-bottom: 12px">Por qué elegirnos</span>
+  <h2 style="max-width: 24ch; margin-bottom: 24px">Un estudio pensado para acompañarte</h2>
+
+  <div style="display: grid; grid-template-columns: minmax(72px, 120px) minmax(0, 1fr); gap: 16px clamp(24px, 4vw, 64px); align-items: baseline; padding: 20px 0; border-top: 2px solid var(--color-divider)">
+    <p style="font-family: var(--font-heading); font-weight: 800; font-size: 15px; margin: 0; position: relative; padding-left: 18px"><span style="content: ''; position: absolute; left: 0; top: 5px; width: 10px; height: 10px; background: var(--color-accent); display: inline-block"></span>01</p>
+    <div><h3 style="font-size: 20px; margin: 0 0 6px">Atención personalizada</h3><p style="margin: 0; font-size: 15px; line-height: 1.6; color: color-mix(in srgb, var(--color-text) 78%, transparent); max-width: 56ch">Hablás directamente con el abogado que lleva tu caso, no con un call center ni con gestores.</p></div>
+  </div>
+  <div style="display: grid; grid-template-columns: minmax(72px, 120px) minmax(0, 1fr); gap: 16px clamp(24px, 4vw, 64px); align-items: baseline; padding: 20px 0; border-top: 2px solid var(--color-divider)">
+    <p style="font-family: var(--font-heading); font-weight: 800; font-size: 15px; margin: 0; position: relative; padding-left: 18px"><span style="position: absolute; left: 0; top: 5px; width: 10px; height: 10px; background: var(--color-accent); display: inline-block"></span>02</p>
+    <div><h3 style="font-size: 20px; margin: 0 0 6px">Respuesta rápida</h3><p style="margin: 0; font-size: 15px; line-height: 1.6; color: color-mix(in srgb, var(--color-text) 78%, transparent); max-width: 56ch">Te respondemos en el día, sin vueltas ni esperas innecesarias.</p></div>
+  </div>
+  <div style="display: grid; grid-template-columns: minmax(72px, 120px) minmax(0, 1fr); gap: 16px clamp(24px, 4vw, 64px); align-items: baseline; padding: 20px 0; border-top: 2px solid var(--color-divider)">
+    <p style="font-family: var(--font-heading); font-weight: 800; font-size: 15px; margin: 0; position: relative; padding-left: 18px"><span style="position: absolute; left: 0; top: 5px; width: 10px; height: 10px; background: var(--color-accent); display: inline-block"></span>03</p>
+    <div><h3 style="font-size: 20px; margin: 0 0 6px">Explicación clara</h3><p style="margin: 0; font-size: 15px; line-height: 1.6; color: color-mix(in srgb, var(--color-text) 78%, transparent); max-width: 56ch">Te explicamos cada paso de tu caso en lenguaje simple, sin tecnicismos innecesarios.</p></div>
+  </div>
+  <div style="display: grid; grid-template-columns: minmax(72px, 120px) minmax(0, 1fr); gap: 16px clamp(24px, 4vw, 64px); align-items: baseline; padding: 20px 0; border-top: 2px solid var(--color-divider); border-bottom: 2px solid var(--color-divider)">
+    <p style="font-family: var(--font-heading); font-weight: 800; font-size: 15px; margin: 0; position: relative; padding-left: 18px"><span style="position: absolute; left: 0; top: 5px; width: 10px; height: 10px; background: var(--color-accent); display: inline-block"></span>04</p>
+    <div><h3 style="font-size: 20px; margin: 0 0 6px">Compromiso real</h3><p style="margin: 0; font-size: 15px; line-height: 1.6; color: color-mix(in srgb, var(--color-text) 78%, transparent); max-width: 56ch">Seguimos tu caso de punta a punta, hasta que se resuelva.</p></div>
+  </div>
+</section>
+
+<section id="preguntas" style="max-width: 1200px; margin: 0 auto; padding: 64px clamp(20px, 5vw, 72px)">
+  <span style="display: block; font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--color-accent-700); font-weight: 800; margin-bottom: 12px">Preguntas frecuentes</span>
+  <h2 style="max-width: 24ch; margin-bottom: 8px">Dudas comunes antes de consultar</h2>
+  <div style="margin-top: 24px">
+    <sc-for list="{{ faqs }}" as="item" hint-placeholder-count="5">
+      <div style="border-top: 2px solid var(--color-divider); padding: 20px 0">
+        <button type="button" onClick="{{ item.toggle }}" style="display: flex; justify-content: space-between; align-items: center; gap: 16px; width: 100%; background: none; border: none; cursor: pointer; padding: 0; font-family: var(--font-heading); font-weight: 800; font-size: 17px; text-align: left; color: var(--color-text)">
+          <span>{{ item.q }}</span>
+          <span style="color: var(--color-accent); font-size: 20px; flex: none">{{ item.icon }}</span>
+        </button>
+        <sc-if value="{{ item.isOpen }}" hint-placeholder-val="{{ false }}">
+          <p style="margin: 14px 0 0; font-size: 15px; line-height: 1.6; color: color-mix(in srgb, var(--color-text) 78%, transparent); max-width: 62ch">{{ item.a }}</p>
+        </sc-if>
+      </div>
+    </sc-for>
+  </div>
+</section>
+
+<section class="close" style="background: var(--color-accent); color: var(--color-bg)">
+  <div style="max-width: 1200px; margin: 0 auto; padding: 56px clamp(20px, 5vw, 72px); display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 24px">
+    <h3 style="font-family: var(--font-heading); font-weight: 800; font-size: clamp(26px, 3.4vw, 40px); line-height: 1.1; margin: 0; color: var(--color-bg); max-width: 26ch">¿Necesitás asesoramiento legal? Escribinos ahora.</h3>
+    <a href="{{ heroWa }}" target="_blank" rel="noopener" class="btn btn-ghost" style="color: var(--color-bg); border: 1px solid var(--color-bg); flex: none">Escribir por WhatsApp</a>
+  </div>
+</section>
+
+<section id="contacto" style="max-width: 1200px; margin: 0 auto; padding: 64px clamp(20px, 5vw, 72px)">
+  <span style="display: block; font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--color-accent-700); font-weight: 800; margin-bottom: 12px">Contacto</span>
+  <h2 style="max-width: 24ch; margin-bottom: 24px">Escribinos y te respondemos a la brevedad</h2>
+
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 48px">
+    <div>
+      <div style="margin-bottom: 20px"><p style="margin: 0 0 4px; font-size: 12px; letter-spacing: 0.06em; text-transform: uppercase; color: color-mix(in srgb, var(--color-text) 60%, transparent)">WhatsApp</p><a href="{{ heroWa }}" target="_blank" rel="noopener" style="font-size: 17px; font-weight: 800; font-family: var(--font-heading)">11 7054-5655</a></div>
+      <div style="margin-bottom: 20px"><p style="margin: 0 0 4px; font-size: 12px; letter-spacing: 0.06em; text-transform: uppercase; color: color-mix(in srgb, var(--color-text) 60%, transparent)">Email</p><a href="{{ mailLink }}" style="font-size: 17px; font-weight: 800; font-family: var(--font-heading)">pellegrinicarlosguillermo@gmail.com</a></div>
+      <div style="margin-bottom: 20px"><p style="margin: 0 0 4px; font-size: 12px; letter-spacing: 0.06em; text-transform: uppercase; color: color-mix(in srgb, var(--color-text) 60%, transparent)">Horario de atención</p><p style="margin: 0; font-size: 17px; font-weight: 800; font-family: var(--font-heading)">Lunes a viernes, 9 a 18 hs</p></div>
+      <div><p style="margin: 0 0 4px; font-size: 12px; letter-spacing: 0.06em; text-transform: uppercase; color: color-mix(in srgb, var(--color-text) 60%, transparent)">Oficina</p><p style="margin: 0; font-size: 17px; font-weight: 800; font-family: var(--font-heading)">Palermo, CABA — atención también en Gran Buenos Aires</p></div>
+    </div>
+
+    <div>
+      <div class="field">
+        <label>Nombre</label>
+        <input class="input" value="{{ name }}" onChange="{{ setName }}" placeholder="Tu nombre" />
+      </div>
+      <div class="field" style="margin-top: 14px">
+        <label>Mensaje</label>
+        <textarea class="input" value="{{ message }}" onChange="{{ setMessage }}" placeholder="Contanos brevemente tu consulta"></textarea>
+      </div>
+      <button type="button" class="btn btn-primary btn-block" onClick="{{ submitForm }}" style="margin-top: 16px; justify-content: center">Enviar por WhatsApp</button>
+    </div>
+  </div>
+</section>
+
+<footer style="max-width: 1200px; margin: 0 auto; padding: 32px clamp(20px, 5vw, 72px); border-top: 2px solid var(--color-divider); display: flex; flex-wrap: wrap; gap: 16px; justify-content: space-between; align-items: center; font-size: 13px; color: color-mix(in srgb, var(--color-text) 70%, transparent)">
+  <span>© 2026 Estudio Jurídico Pellegrini. Todos los derechos reservados.</span>
+  <div style="display: flex; gap: 20px; flex-wrap: wrap">
+    <a href="https://instagram.com/pellegrini.abogado" target="_blank" rel="noopener">Instagram</a>
+    <a href="https://www.linkedin.com/in/pellegrinicg" target="_blank" rel="noopener">LinkedIn</a>
+    <a href="{{ mailLink }}">Email</a>
+  </div>
+</footer>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { openFaq: 0, name: '', message: '' };
+
+  waNumber = '5491170545655';
+
+  areaNames = ['Registro de marcas', 'Defensa del consumidor', 'Consumos desconocidos', 'Reclamos a empresas de servicios', 'Accidentes de tránsito', 'Sucesiones', 'Retención de ganancias a jubilados', 'Accidentes de trabajo', 'Despidos', 'Amparos de salud', 'Asesoramiento a pymes', 'Consultas generales'];
+
+  faqData = [
+    { q: '¿Cuánto cuesta la consulta inicial?', a: 'La primera consulta se coordina por WhatsApp o email, donde te confirmamos el costo según el tipo de caso antes de avanzar.' },
+    { q: '¿Cuánto tiempo lleva resolver mi caso?', a: 'Depende del tipo de trámite y del área. En la consulta inicial te damos un panorama realista de los tiempos esperados para tu situación.' },
+    { q: '¿Atienden a distancia?', a: 'Sí. Además de la atención presencial en Palermo, CABA, atendemos consultas y seguimiento de casos a distancia para todo el Gran Buenos Aires.' },
+    { q: '¿Cómo se calculan los honorarios?', a: 'Los honorarios se acuerdan según el tipo de caso y su complejidad, y siempre se informan con claridad antes de empezar a trabajar.' },
+    { q: '¿Cómo hago el seguimiento de mi caso?', a: 'Tenés contacto directo con el abogado por WhatsApp o email durante todo el proceso, para consultar el estado de tu caso cuando lo necesites.' },
+  ];
+
+  waLink(text) {
+    return `https://wa.me/${this.waNumber}?text=${encodeURIComponent(text)}`;
+  }
+
+  toggleFaq(i) {
+    this.setState(s => ({ openFaq: s.openFaq === i ? null : i }));
+  }
+
+  setField(key, e) {
+    this.setState({ [key]: e.target.value });
+  }
+
+  submitForm() {
+    const text = `Hola, soy ${this.state.name || ''}. ${this.state.message || ''}`.trim();
+    window.open(this.waLink(text), '_blank');
+  }
+
+  renderVals() {
+    const areas = this.areaNames.map(name => ({
+      name,
+      wa: this.waLink(`Hola, quería consultar sobre ${name}.`),
+    }));
+    const faqs = this.faqData.map((f, i) => ({
+      ...f,
+      isOpen: this.state.openFaq === i,
+      icon: this.state.openFaq === i ? '−' : '+',
+      toggle: () => this.toggleFaq(i),
+    }));
+    return {
+      areas,
+      faqs,
+      heroWa: this.waLink('Hola, quería hacer una consulta.'),
+      mailLink: 'mailto:pellegrinicarlosguillermo@gmail.com',
+      name: this.state.name,
+      message: this.state.message,
+      setName: (e) => this.setField('name', e),
+      setMessage: (e) => this.setField('message', e),
+      submitForm: () => this.submitForm(),
+    };
+  }
+}
+</script>
+</body>
+</html>
